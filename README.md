@@ -13,11 +13,11 @@ Che tu sia un principiante o un esperto di Flutter, questo talk ti fornirà cono
 
 In dettaglio, vedremo:
 
-* Introduzione a Riverpod;
-* Provider;
-* StateProvider;
-* Notifier e AsyncNotifier;
-* FutureProvider e StreamProvider.
+* Introduzione a Riverpod
+* Provider
+* StateProvider
+* Notifier e AsyncNotifier
+* FutureProvider e StreamProvider
 
 *Questo evento non è affiliato, sponsorizzato o approvato da Google LLC. "Flutter" e "Dart" sono marchi registrati di Google LLC. I contenuti di questo evento sono puramente informativi ed educativi e non implicano alcuna associazione con le aziende menzionate.*
 
