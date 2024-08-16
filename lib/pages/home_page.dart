@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,14 +16,14 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             FilledButton(
-              onPressed: () => {},
+              onPressed: () => context.push('/state-provider'),
               child: const Text('StateProvider'),
             ),
             const SizedBox(
               height: 16,
             ),
             FilledButton(
-              onPressed: () => {},
+              onPressed: () => context.push('/notifier'),
               child: const Text('Notifier e AsyncNotifier'),
             ),
           ],
