@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_zero_hero_thecmmbay/app/app.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:window_manager/window_manager.dart';
@@ -19,5 +20,5 @@ void main() async {
     });
   }
 
-  runApp(const MainApp());
+  runApp(ProviderScope(child: App()));
 }
