@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:riverpod_zero_hero_thecmmbay/i10n/hardcoded_strings.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Riverpod ZtoH'),
+        title: Text('Riverpod ZtoH'.hardcoded),
       ),
       body: Center(
         child: Column(
@@ -17,14 +18,14 @@ class HomePage extends StatelessWidget {
           children: [
             FilledButton(
               onPressed: () => context.push('/state-provider'),
-              child: const Text('StateProvider'),
+              child: Text('StateProvider'.hardcoded),
             ),
             const SizedBox(
               height: 16,
             ),
             FilledButton(
               onPressed: () => context.push('/notifier'),
-              child: const Text('Notifier e AsyncNotifier'),
+              child: Text('(Async)NotifierProvider'.hardcoded),
             ),
           ],
         ),
