@@ -33,7 +33,7 @@ Durante la presentazione mi sono occupato dei seguenti provider:
 
 | Homepage #1 | StateProvider #2 | Notifier #3 |
 |-|-|-|
-| <img src="screenshot/homepage.png"> | <img src="screenshot/state_provider_page.png"> | <img src="screenshot/notifier_page.png"> |
+| <img width=300 src="screenshot/homepage.png"> | <img width=300 src="screenshot/state_provider_page.png"> | <img width=300 src="screenshot/notifier_page.png"> |
 
 
 ## 💎 Contribuire
