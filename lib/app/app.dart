@@ -11,9 +11,9 @@ class App extends StatelessWidget {
       routerConfig: router,
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: Colors.green,
+        colorSchemeSeed: Colors.indigo,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.indigo,
           foregroundColor: Colors.white,
           centerTitle: true,
         ),
