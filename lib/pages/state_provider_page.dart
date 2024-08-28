@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_zero_hero_thecmmbay/i10n/hardcoded_strings.dart';
+import 'package:riverpod_zero_hero_thecmmbay/provider/state_provider.dart';
 import 'package:riverpod_zero_hero_thecmmbay/utils/utils.dart';
-
-final indexTabProvider = StateProvider<int>((ref) => 0);
 
 class StateProviderPage extends ConsumerWidget {
   const StateProviderPage({super.key});

@@ -25,3 +25,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/layer/
+    - assets/layer/condimento/
+    - assets/layer/impasto/
+    - assets/layer/salsa/

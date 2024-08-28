@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_zero_hero_thecmmbay/i10n/hardcoded_strings.dart';
+import 'package:riverpod_zero_hero_thecmmbay/provider/notifier_provider.dart';
 import 'package:riverpod_zero_hero_thecmmbay/utils/utils.dart';
 
 class NotifierPage extends ConsumerWidget {
@@ -8,6 +9,8 @@ class NotifierPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final myPizzaProvider = ref.watch(pizzaProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('(Async)NotifierProvider'.hardcoded),
@@ -23,7 +26,81 @@ class NotifierPage extends ConsumerWidget {
           ),
         ],
       ),
-      body: const SizedBox.shrink(),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                myPizzaProvider.linkImpasto == ""
+                    ? const SizedBox.shrink()
+                    : Image.asset(myPizzaProvider.linkImpasto),
+                myPizzaProvider.linkSalsa == ""
+                    ? const SizedBox.shrink()
+                    : Image.asset(myPizzaProvider.linkSalsa),
+                myPizzaProvider.linkCondimento == ""
+                    ? const SizedBox.shrink()
+                    : Image.asset(myPizzaProvider.linkCondimento),
+              ],
+            ),
+            gapH(20),
+            Text("Impasto".hardcoded),
+            DropdownButtonFormField(
+              value: impastoOptionList[0].link,
+              onChanged: (value) {
+                ref.read(pizzaProvider.notifier).changeImpasto(value!);
+              },
+              items: impastoOptionList
+                  .map(
+                    (singleDivider) => DropdownMenuItem(
+                      value: singleDivider.link,
+                      child: Text(
+                        singleDivider.name,
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+            gapH(20),
+            Text("Salsa".hardcoded),
+            DropdownButtonFormField(
+              value: salsaOptionList[0].link,
+              onChanged: (value) {
+                ref.read(pizzaProvider.notifier).changeSalsa(value!);
+              },
+              items: salsaOptionList
+                  .map(
+                    (singleDivider) => DropdownMenuItem(
+                      value: singleDivider.link,
+                      child: Text(
+                        singleDivider.name,
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+            gapH(20),
+            Text("Condimento".hardcoded),
+            DropdownButtonFormField(
+              value: condimentoOptionList[0].link,
+              onChanged: (value) {
+                ref.read(pizzaProvider.notifier).changeCondimento(value!);
+              },
+              items: condimentoOptionList
+                  .map(
+                    (singleDivider) => DropdownMenuItem(
+                      value: singleDivider.link,
+                      child: Text(
+                        singleDivider.name,
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
