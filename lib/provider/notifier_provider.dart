@@ -34,21 +34,18 @@ class MyPizza {
 }
 
 List<PizzaOption> impastoOptionList = [
-  PizzaOption(name: "Empty Impasto", link: ""),
   PizzaOption(name: "Classico", link: "assets/layer/impasto/classico.png"),
   PizzaOption(name: "Integrale", link: "assets/layer/impasto/integrale.png"),
   PizzaOption(name: "Farro", link: "assets/layer/impasto/farro.png"),
 ];
 
 List<PizzaOption> salsaOptionList = [
-  PizzaOption(name: "Empty Salsa", link: ""),
   PizzaOption(name: "Pomodoro", link: "assets/layer/salsa/pomodoro.png"),
   PizzaOption(name: "Formaggio", link: "assets/layer/salsa/formaggio.png"),
   PizzaOption(name: "Zucca", link: "assets/layer/salsa/zucca.png"),
 ];
 
 List<PizzaOption> condimentoOptionList = [
-  PizzaOption(name: "Empty Condimento", link: ""),
   PizzaOption(
       name: "Mozzarella", link: "assets/layer/condimento/mozzarella.png"),
   PizzaOption(name: "Patate", link: "assets/layer/condimento/patate.png"),
@@ -59,7 +56,10 @@ List<PizzaOption> condimentoOptionList = [
 class Pizza extends _$Pizza {
   @override
   MyPizza build() {
-    return MyPizza(linkCondimento: "", linkImpasto: "", linkSalsa: "");
+    return MyPizza(
+        linkImpasto: impastoOptionList[0].link,
+        linkCondimento: condimentoOptionList[0].link,
+        linkSalsa: salsaOptionList[0].link);
   }
 
   void changeImpasto(String newImpastoLink) {
