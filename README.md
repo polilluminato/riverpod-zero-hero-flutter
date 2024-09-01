@@ -33,17 +33,18 @@ Durante la presentazione mi sono occupato dei seguenti provider:
 
 | Homepage #1 | StateProvider #2 | Notifier #3 |
 |-|-|-|
-| <img width=300 src="screenshot/homepage.png"> | <img width=300 src="screenshot/state_provider_page.png"> | <img width=300 src="screenshot/notifier_page.png"> |
+|![](screenshots/homepage.png)|![](screenshots/state_provider_page.png)|![](screenshots/notifier_page.png)|
 
 
 ## 💎 Contribuire
 
-Se avete qualche idea, sentitevi liberi di creare un fork e di inviarmi le vostre modifiche.
+Se trovate un errore, non esitate a segnalarlo come issue e a descriverlo nel modo migliore possibile.
+Se vuoi contribuire con del codice, crea prima una issue.
 
-<img alt="Fork and contribute" src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg" />
+![Fork and contribute](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 ## 📋 Licenza
 
-Finanza personale è rilasciato con [licenza MIT](LICENSE.md). È possibile utilizzare il codice per qualsiasi scopo, compresi i progetti commerciali.
+Flutter Riverpod da Zero a Hero è rilasciato con [licenza MIT](LICENSE.md). È possibile utilizzare il codice per qualsiasi scopo, compresi i progetti commerciali.
 
 [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
