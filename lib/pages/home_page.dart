@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:riverpod_zero_hero_thecmmbay/i10n/hardcoded_strings.dart';
+import 'package:riverpod_zero_hero_thecmmbay/l10n/hardcoded_strings.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

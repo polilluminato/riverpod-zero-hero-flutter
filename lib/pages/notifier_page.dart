@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_zero_hero_thecmmbay/i10n/hardcoded_strings.dart';
+import 'package:riverpod_zero_hero_thecmmbay/l10n/hardcoded_strings.dart';
 import 'package:riverpod_zero_hero_thecmmbay/provider/notifier_provider.dart';
 import 'package:riverpod_zero_hero_thecmmbay/utils/utils.dart';
 
@@ -53,10 +53,10 @@ class NotifierPage extends ConsumerWidget {
               },
               items: impastoOptionList
                   .map(
-                    (singleDivider) => DropdownMenuItem(
-                      value: singleDivider.link,
+                    (singleOption) => DropdownMenuItem(
+                      value: singleOption.link,
                       child: Text(
-                        singleDivider.name,
+                        singleOption.name,
                       ),
                     ),
                   )
@@ -71,10 +71,10 @@ class NotifierPage extends ConsumerWidget {
               },
               items: salsaOptionList
                   .map(
-                    (singleDivider) => DropdownMenuItem(
-                      value: singleDivider.link,
+                    (singleOption) => DropdownMenuItem(
+                      value: singleOption.link,
                       child: Text(
-                        singleDivider.name,
+                        singleOption.name,
                       ),
                     ),
                   )
@@ -89,10 +89,10 @@ class NotifierPage extends ConsumerWidget {
               },
               items: condimentoOptionList
                   .map(
-                    (singleDivider) => DropdownMenuItem(
-                      value: singleDivider.link,
+                    (singleOption) => DropdownMenuItem(
+                      value: singleOption.link,
                       child: Text(
-                        singleDivider.name,
+                        singleOption.name,
                       ),
                     ),
                   )
