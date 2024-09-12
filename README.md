@@ -29,9 +29,11 @@ Durante la presentazione mi sono occupato dei seguenti provider:
 * [StateProvider](https://riverpod.dev/docs/providers/state_provider)
 * [(Async)NotifierProvider](https://riverpod.dev/docs/providers/notifier_provider)
 
+Una risorsa utilissima a cui fare sempre riferimento è quella scritta da [Andrea Bizzotto](https://x.com/biz84) sul suo sito [Code with Andrea](https://codewithandrea.com/) dal titolo: [Flutter Riverpod 2.0: The Ultimate Guide](https://codewithandrea.com/articles/flutter-state-management-riverpod/)
+
 ## 📱 Screenshots
 
-| Homepage #1 | StateProvider #2 | Notifier #3 |
+| Homepage | StateProvider | Notifier |
 |-|-|-|
 |![](screenshots/homepage.png)|![](screenshots/state_provider_page.png)|![](screenshots/notifier_page.png)|
 
