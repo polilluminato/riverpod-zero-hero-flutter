@@ -33,15 +33,9 @@ class NotifierPage extends ConsumerWidget {
           children: [
             Stack(
               children: [
-                myPizzaProvider.linkImpasto == ""
-                    ? const SizedBox.shrink()
-                    : Image.asset(myPizzaProvider.linkImpasto),
-                myPizzaProvider.linkSalsa == ""
-                    ? const SizedBox.shrink()
-                    : Image.asset(myPizzaProvider.linkSalsa),
-                myPizzaProvider.linkCondimento == ""
-                    ? const SizedBox.shrink()
-                    : Image.asset(myPizzaProvider.linkCondimento),
+                Image.asset(myPizzaProvider.linkImpasto),
+                Image.asset(myPizzaProvider.linkSalsa),
+                Image.asset(myPizzaProvider.linkCondimento),
               ],
             ),
             gapH(20),
