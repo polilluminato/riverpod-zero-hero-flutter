@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_zero_hero_thecmmbay/pages/home_page.dart';
-import 'package:riverpod_zero_hero_thecmmbay/pages/notifier_page.dart';
+import 'package:riverpod_zero_hero_thecmmbay/pages/notifier_provider_page.dart';
 import 'package:riverpod_zero_hero_thecmmbay/pages/state_provider_page.dart';
 
 final GoRouter router = GoRouter(
