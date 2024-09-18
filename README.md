@@ -29,9 +29,71 @@ Durante la presentazione mi sono occupato dei seguenti provider:
 * [StateProvider](https://riverpod.dev/docs/providers/state_provider)
 * [(Async)NotifierProvider](https://riverpod.dev/docs/providers/notifier_provider)
 
-Le slide mostrate durante la presentazione possono essere visualizzate [qui](slides/RiverpodZeroToHero-TheCommBay.pdf).
+### Code Generation
 
-Una risorsa utilissima a cui fare sempre riferimento è quella scritta da [Andrea Bizzotto](https://x.com/biz84) sul suo sito [Code with Andrea](https://codewithandrea.com/) dal titolo: [Flutter Riverpod 2.0: The Ultimate Guide](https://codewithandrea.com/articles/flutter-state-management-riverpod/)
+Per semplificare la scrittura dei provider, è possibile sfruttare la code generation di Flutter. In questo progetto, è stata impiegata per realizzare il notifier provider, strutturato come segue:
+
+```dart
+part 'notifier_provider.g.dart';
+@riverpod
+class Pizza extends _$Pizza {
+  @override
+  MyPizza build() {
+    return MyPizza(
+        linkImpasto: impastoOptionList[0].link,
+        linkCondimento: condimentoOptionList[0].link,
+        linkSalsa: salsaOptionList[0].link);
+  }
+
+  void changeImpasto(String newImpastoLink) {
+    state = state.copyWith(linkImpasto: newImpastoLink);
+  }
+
+  void changeSalsa(String newSalsaLink) {
+    state = state.copyWith(linkSalsa: newSalsaLink);
+  }
+
+  void changeCondimento(String newCondimentoLink) {
+    state = state.copyWith(linkCondimento: newCondimentoLink);
+  }
+}
+```
+
+Volendolo scrivere senza la code generation il risultato sarebbe questo:
+
+```dart
+class PizzaNotifier extends Notifier<MyPizza> {
+  @override
+  MyPizza build() {
+    return MyPizza(
+        linkImpasto: impastoOptionList[0].link,
+        linkCondimento: condimentoOptionList[0].link,
+        linkSalsa: salsaOptionList[0].link);
+  }
+
+  void changeImpasto(String newImpastoLink) {
+    state = state.copyWith(linkImpasto: newImpastoLink);
+  }
+
+  void changeSalsa(String newSalsaLink) {
+    state = state.copyWith(linkSalsa: newSalsaLink);
+  }
+
+  void changeCondimento(String newCondimentoLink) {
+    state = state.copyWith(linkCondimento: newCondimentoLink);
+  }
+}
+
+final pizzaProvider =
+    NotifierProvider<PizzaNotifier, MyPizza>(() => PizzaNotifier());
+```
+
+### Approfondimenti e link
+
+* [Slide della presentazione](slides/RiverpodZeroToHero-TheCommBay.pdf)
+* [Documentazione di Riverpod](https://riverpod.dev/)
+* [Flutter Riverpod 2.0: The Ultimate Guide](https://codewithandrea.com/articles/flutter-state-management-riverpod/)
+* [Code Generation with Dart & Flutter: The Ultimate Guide](https://codewithandrea.com/articles/dart-flutter-code-generation/)
 
 ## 📱 Screenshots
 
