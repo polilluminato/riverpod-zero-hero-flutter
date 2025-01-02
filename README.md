@@ -1,8 +1,10 @@
-![Flutter Riverpod - Gestione dello stato da zero a hero](https://thecmmbay.com/cache/covers_event/media/covers/2024-09-16_flutter-riverpod-gestione-dello-stato-da-zero-a-hero_ko7mkrjyw_77425add.jpg.webp)
+![Flutter Riverpod - Gestione dello stato da zero a hero](.github/cover.jpg)
 
 # Flutter Riverpod: gestione dello Stato da Zero a Hero
 
 Questo repository contiene il codice dell'applicazione demo che ho realizzato per il talk [Flutter Riverpod: gestione dello Stato da Zero a Hero](https://thecmmbay.com/eventi/flutter-riverpod-gestione-dello-stato-da-zero-a-hero-ko7mkrjyw) per [The Communities Bay](https://thecmmbay.com/).
+
+📺 Video della diretta su YouTube: [Flutter Riverpod: gestione dello Stato da Zero a Hero • Community Mobile Dev di TCB 5](https://www.youtube.com/watch?v=pW8hAEHYk54)
 
 ## Sommario
 
